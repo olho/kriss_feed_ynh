@@ -1,0 +1,36 @@
+{
+    "name": "KrISS Feed",
+    "id": "krissfeed",
+    "description": {
+        "en": "A simple and smart (or stupid) feed reader.",
+        "fr": "Un agrégateur de flux simple et (stupidement) intelligent."
+    },
+    "licence": "GPL-2",
+    "developer": {
+        "name": "Romain Hennuyer",
+        "email": "romain.hennuyer@gmail.com",
+        "url": "http://github.com/romainhk/kriss_feed_ynh/"
+    },
+    "multi_instance": "false",
+    "arguments": {
+        "install" : [
+            {
+                "name": "domain",
+                "ask": {
+                    "en": "Choose a domain for krissfeed",
+                    "fr": "Choisissez un nom de domaine pour krissfeed"
+                },
+                "example": "example.com"
+            },
+            {
+                "name": "path",
+                "ask": {
+                    "en": "Choose a path for krissfeed",
+                    "fr": "Choisissez un chemin pour krissfeed"
+                },
+                "example": "/kriss_feed",
+                "default": "/kriss_feed"
+            }
+        ]
+    }
+}
