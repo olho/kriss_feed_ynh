@@ -1,6 +1,5 @@
 *~
 build*
-data*
 *.log
-*.xml
-web/cache/*
+*.swo
+*.swp
