@@ -12,7 +12,7 @@ if [[ ! $? -eq 0 ]]; then
 fi
 
 # Copy source files
-final_path=/var/www/krissfeed
+final_path=/var/www/$app
 sudo mkdir -p $final_path
 sudo cp -a ../sources/* $final_path
 
