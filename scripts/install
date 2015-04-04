@@ -21,6 +21,8 @@ fi
 final_path=/var/www/$app
 sudo mkdir -p $final_path
 sudo cp -a ../sources/* $final_path
+sudo mkdir -p $final_path/data
+sudo mkdir -p $final_path/data/inc
 
 # Modify Nginx configuration file and copy it to Nginx conf directory
 sed -i "s@YNH_WWW_PATH@$path@g" ../conf/nginx.conf
