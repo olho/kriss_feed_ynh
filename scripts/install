@@ -45,8 +45,8 @@ fi
 
 
 # Restart services
-sudo service nginx reload
-sudo yunohost app ssowatconf
+
 sudo yunohost app setting $app skipped_uris -v "/data/update.php"
-#sudo yunohost app setting $app unprotected_uris -v "/data/update.php"
+sudo yunohost app ssowatconf
+sudo service nginx reload
 #no updating feeds via cron
