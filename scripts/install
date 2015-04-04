@@ -7,6 +7,12 @@ path=$2
 admin=$3
 is_public=$4
 
+# Check if admin exists
+sudo yunohost user list --json | grep -q "\"username\": \"$admin\""
+if [[ ! $? -eq 0 ]]; then
+    echo "Wrong admin"
+    exit 1
+fi
 
 
 # Check domain/path availability
@@ -18,7 +24,7 @@ fi
 # Save app settings
 sudo yunohost app setting $app admin -v "$admin"
 sudo yunohost app setting $app is_public -v "$is_public"
-
+sudo yunohost app setting $app domain -v $domain
 
 
 # Copy source files
@@ -29,7 +35,7 @@ sudo mkdir -p $final_path/data
 sudo chown www-data:www-data -R $final_path/data
 # Set permissions to kriss directory
 sudo chmod -R 775 /var/www/$app
-sudo chown www-data:www-data -R /var/www/$app/index.php
+sudo chown -R www-data: $final_path
 
 # Modify Nginx configuration file and copy it to Nginx conf directory
 sed -i "s@YNH_WWW_PATH@$path@g" ../conf/nginx.conf
