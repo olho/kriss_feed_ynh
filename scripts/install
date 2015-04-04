@@ -7,12 +7,6 @@ path=$2
 admin=$3
 is_public=$4
 
-# Check if admin exists
-sudo yunohost user list --json | grep -q "\"username\": \"$admin\""
-if [[ ! $? -eq 0 ]]; then
-    echo "Wrong admin"
-    exit 1
-fi
 
 
 # Check domain/path availability
