@@ -1,5 +1,5 @@
 #!/bin/bash
-app=kriss_feed
+app=krissfeed
 
 # The parameter $1 is the uncompressed restore directory location
 backup_dir=$1/apps/$app
