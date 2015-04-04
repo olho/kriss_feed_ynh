@@ -29,7 +29,7 @@
                     "fr": "Choisissez un chemin pour krissfeed"
                 },
                 "example": "/kriss_feed",
-                "default": "/kriss_feed"
+                "default": "/krissfeed"
             }
         ]
     }
