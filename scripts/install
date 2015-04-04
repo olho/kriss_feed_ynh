@@ -25,6 +25,7 @@ sudo mkdir -p $final_path/data
 sudo chown www-data:www-data -R $final_path/data
 # Set permissions to kriss directory
 sudo chmod -R 775 /var/www/$app
+sudo chown www-data:www-data -R $final_path/index.php
 
 # Modify Nginx configuration file and copy it to Nginx conf directory
 sed -i "s@YNH_WWW_PATH@$path@g" ../conf/nginx.conf
