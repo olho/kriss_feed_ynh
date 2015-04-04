@@ -35,7 +35,8 @@ then
 fi
 
 # Set permissions to kriss directory
-sudo chmod -R 775 $final_path/index.php
+sudo chown -R www-data: $final_path/data/
+sudo chmod -R 777 $final_path/index.php
 
 # Restart services
 sudo service nginx reload
